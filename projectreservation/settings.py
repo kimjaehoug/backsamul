@@ -114,7 +114,14 @@ CORS_ALLOWED_ORIGINS = [
     'https://frontendsamul.vercel.app'# React 개발 서버 주소
 ]
 
-
+CORS_ALLOW_METHODS = [
+    'GET',
+    'POST',
+    'PUT',
+    'PATCH',
+    'DELETE',
+    'OPTIONS',
+]
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
