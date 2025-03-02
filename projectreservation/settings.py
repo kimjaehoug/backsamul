@@ -38,11 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'reservations',
-    'corsheaders',
 ]
 
 MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware',  # CORS 미들웨어 (위쪽에 위치)
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',  # 세션 미들웨어
@@ -56,7 +54,6 @@ SESSION_COOKIE_SECURE = False  # 로컬 개발에서는 False (HTTPS가 아닌 �
 SESSION_COOKIE_HTTPONLY = False
 SESSION_COOKIE_SAMESITE = None  # CORS와 함께 사용
 
-CORS_ALLOW_CREDENTIALS = False  # 쿠키 및 인증 정보 허용
 
 ROOT_URLCONF = 'projectreservation.urls'
 
@@ -107,18 +104,6 @@ AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
-]
-CORS_ALLOWED_ORIGINS = [
-    '*'
-]
-
-CORS_ALLOW_METHODS = [
-    'GET',
-    'POST',
-    'PUT',
-    'PATCH',
-    'DELETE',
-    'OPTIONS',
 ]
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
