@@ -77,7 +77,7 @@ CORS_ALLOW_HEADERS = [
 
 CSRF_COOKIE_NAME = 'csrftoken'
 CSRF_HEADER_NAME = 'HTTP_X_CSRFTOKEN'
-CSRF_COOKIE_SECURE = False  # 로컬/테스트에서는 False, 프로덕션에서는 True
+CSRF_COOKIE_SECURE = True  # 로컬/테스트에서는 False, 프로덕션에서는 True
 CSRF_COOKIE_HTTPONLY = True
 CSRF_COOKIE_SAMESITE = 'Lax'  # 프로덕션에서는 'None' (HTTPS 필요)
 ROOT_URLCONF = 'projectreservation.urls'
