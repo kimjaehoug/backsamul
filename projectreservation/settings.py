@@ -25,7 +25,9 @@ SECRET_KEY = 'django-insecure-(w_)z4sajd1^tgomi(235f$*!1sbh_8errrw$3vh-)%p2ee%-d
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [
+    'http://localhost:3000',  # 로컬 개발 환경
+    'https://frontendsamul.vercel.app']
 
 
 # Application definition
