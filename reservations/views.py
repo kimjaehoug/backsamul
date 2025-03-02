@@ -1,4 +1,5 @@
 # views.py
+from django.views.decorators.csrf import ensure_csrf_cookie
 from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
@@ -178,6 +179,7 @@ def cancel_seat(request):
 
 # reservations/views.py
 @api_view(['GET'])
+@ensure_csrf_cookie
 def get_seats(request):
     seats = Seat.objects.all()
     serializer = SeatSerializer(seats, many=True)
