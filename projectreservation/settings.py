@@ -47,15 +47,14 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',  # 세션 미들웨어
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',  # 인증 미들웨어
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-SESSION_COOKIE_SECURE = True  # 로컬 개발에서는 False (HTTPS가 아닌 경우)
-SESSION_COOKIE_HTTPONLY = True
-SESSION_COOKIE_SAMESITE = 'Lax'  # CORS와 함께 사용
+SESSION_COOKIE_SECURE = False  # 로컬 개발에서는 False (HTTPS가 아닌 경우)
+SESSION_COOKIE_HTTPONLY = False
+SESSION_COOKIE_SAMESITE = None  # CORS와 함께 사용
 
 CORS_ALLOW_CREDENTIALS = True  # 쿠키 및 인증 정보 허용
 
