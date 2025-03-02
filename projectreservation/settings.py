@@ -109,8 +109,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:3000',
-    'https://frontendsamul.vercel.app'# React 개발 서버 주소
+    '*'
 ]
 
 CORS_ALLOW_METHODS = [
