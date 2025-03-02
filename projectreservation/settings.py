@@ -53,12 +53,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
-SESSION_COOKIE_SECURE = True  # 로컬 개발에서는 False (HTTPS가 아닌 경우)
-SESSION_COOKIE_HTTPONLY = True
-SESSION_COOKIE_SAMESITE = 'Lax'  # 프로덕션에서는 'None' (HTTPS 필요)
-
-CORS_ALLOW_CREDENTIALS = True  # 쿠키 및 인증 정보 허용
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',  # 로컬 개발 환경
     'https://frontendsamul.vercel.app',  # Vercel에 배포된 프론트엔드 도메인
@@ -76,6 +70,11 @@ CORS_ALLOW_HEADERS = [
     'X-CSRFToken',
     'Authorization',
 ]
+SESSION_COOKIE_SECURE = True  # 로컬 개발에서는 False (HTTPS가 아닌 경우)
+SESSION_COOKIE_HTTPONLY = True
+SESSION_COOKIE_SAMESITE = 'Lax'  # 프로덕션에서는 'None' (HTTPS 필요)
+
+CORS_ALLOW_CREDENTIALS = True  # 쿠키 및 인증 정보 허용
 
 CSRF_COOKIE_NAME = 'csrftoken'
 CSRF_HEADER_NAME = 'HTTP_X_CSRFTOKEN'
