@@ -26,8 +26,8 @@ SECRET_KEY = 'django-insecure-(w_)z4sajd1^tgomi(235f$*!1sbh_8errrw$3vh-)%p2ee%-d
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    'http://localhost:3000',  # 로컬 개발 환경
-    'https://frontendsamul.vercel.app']
+    'localhost:3000',  # 로컬 개발 환경
+    'frontendsamul.vercel.app']
 
 
 # Application definition
@@ -70,7 +70,8 @@ CORS_ALLOW_HEADERS = [
     'X-CSRFToken',
     'Authorization',
 ]
-SESSION_COOKIE_SECURE = True  # 로컬 개발에서는 False (HTTPS가 아닌 경우)
+CSRF_COOKIE_SECURE = False  # 로컬 테스트에서는 False, 프로덕션에서는 True
+SESSION_COOKIE_SECURE = False  # 로컬 테스트에서는 False, 프로덕션에서는 True
 SESSION_COOKIE_HTTPONLY = True
 SESSION_COOKIE_SAMESITE = 'Lax'  # 프로덕션에서는 'None' (HTTPS 필요)
 
