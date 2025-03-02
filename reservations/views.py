@@ -179,7 +179,6 @@ def cancel_seat(request):
 
 # reservations/views.py
 @api_view(['GET'])
-@ensure_csrf_cookie
 def get_seats(request):
     seats = Seat.objects.all()
     serializer = SeatSerializer(seats, many=True)
