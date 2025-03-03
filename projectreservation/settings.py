@@ -53,7 +53,8 @@ MIDDLEWARE = [
 ]
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',  # 로컬 개발 환경
-    'https://frontendsamul.vercel.app',  # Vercel에 배포된 프론트엔드 도메인
+    'https://frontendsamul.vercel.app',
+    'https://lockersft.vercel.app',# Vercel에 배포된 프론트엔드 도메인
 ]
 CORS_ALLOW_METHODS = [
     'GET',
